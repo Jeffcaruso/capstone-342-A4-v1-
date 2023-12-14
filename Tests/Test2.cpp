@@ -1,6 +1,6 @@
 //============================================================================
 // Name        : Test2
-// Test Desc.  : <desc>
+// Test Desc.  : testing the copy constructor for the SkipList
 // Author      : Jeffrey Caruso
 // Date    	   : Fall 2023
 //============================================================================
@@ -19,40 +19,25 @@ using namespace std;
 // for c strings, use EXPECT_STREQ (or STRNE)
 // http://google.github.io/googletest/reference/assertions.html
 
-TEST(Test2, t2)
+// testing the copy constructor for the SkipList
+TEST(Test2, copyConstructorTesting)
 {
 
-	// Maze myMaze;
-    // string mazeFile = "data/maze1.txt";
-    // bool result = false;
-    // result = myMaze.load(mazeFile);
-    // if (! result)
-    // {
-    //     cerr << "Failed to load " << mazeFile << endl;
-    //     //rest of this is useless without the test file being loaded in, so exit here...
-    //     ASSERT_TRUE(result); 
-    //     return;
-    // }
-    // //if made it here, should pass.
-    // EXPECT_TRUE(result); 
+	// stringstream outSS;
+  // SkipList *skp1 = new SkipList;
+  // skp1->add(vector<int>{9, 1, 7, 5});
 
-    // cout << "*** Solving " << mazeFile << endl;
-    // result = myMaze.solve();
-    // if (result)
-    // {
-    //     EXPECT_TRUE(result);
-    //     cout << "Path: " << myMaze.getPath() << endl;
-    // }
-    // else
-    // {
-    //     //should fail here... b/c solve() failed to solve it.
-    //     EXPECT_TRUE(result);
-    //     cout << "Failed to solve: " << mazeFile << endl;
-    // }
-    // cout << myMaze << endl;
-    // string expectedPath;
-    // //solving order of: N E S W... (with backtracking)
-    // expectedPath = "NNWWWWWNNNEEEEEESEESSSEEENNNNN";
-    // EXPECT_EQ(myMaze.getPath(), expectedPath);
+  // outSS.str("");
+  // outSS << *skp1;
+  // assert(outSS.str() == "[level: 1] 1-->5-->7-->9-->nullptr\n");
+
+  // SkipList *skp2 = new SkipList(*skp1);
+  // delete skp1;
+  // outSS.str("");
+  // outSS << *skp2;
+  // assert(outSS.str() == "[level: 1] 1-->5-->7-->9-->nullptr\n");
+  // delete skp2;
+  // // TODO(student) check there are no memory leaks after test completed
+  // cout << "test2 done." << endl;
 }
 

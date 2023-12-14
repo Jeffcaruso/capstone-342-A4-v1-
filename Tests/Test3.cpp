@@ -1,6 +1,6 @@
 //============================================================================
 // Name        : Test3
-// Test Desc.  : <desc>
+// Test Desc.  : testing SkipList with multiple levels
 // Author      : Jeffrey Caruso
 // Date    	   : Fall 2023
 //============================================================================
@@ -14,41 +14,43 @@
 
 using namespace std;
 
-TEST(Test3, t3)
+//testing SkipList with multiple levels
+TEST(Test3, multiLevelSkiplist)
 {
 
-	// Maze myMaze;
-    // string mazeFile = "data/maze2.txt";
-    // bool result = false;
-    // result = myMaze.load(mazeFile);
-    // if (! result)
-    // {
-    //     cerr << "Failed to load " << mazeFile << endl;
-    //     //rest of this is useless without the test file being loaded in, so exit here...
-    //     ASSERT_TRUE(result); 
-    //     return;
-    // }
-    // //if made it here, should pass.
-    // EXPECT_TRUE(result); 
+	// stringstream outSS;
+  // SkipList skp(3, 80);
+  // skp.add(vector<int>{9, 1, 7, 5, 3, 20});
 
-    // cout << "*** Solving " << mazeFile << endl;
-    // result = myMaze.solve();
-    // if (result)
-    // {
-    //     EXPECT_TRUE(result);
-    //     cout << "Path: " << myMaze.getPath() << endl;
-    // }
-    // else
-    // {
-    //     //should fail here... b/c solve() failed to solve it.
-    //     EXPECT_TRUE(result);
-    //     cout << "Failed to solve: " << mazeFile << endl;
-    // }
-    // cout << myMaze << endl;
-    // string expectedPath;
-    // //solving order of: N E S W... (with backtracking)
-    // cout << "Note the expected backtracking with the usage of NESW path-finding order"
-    // expectedPath = "NEEEEEENNNNN";
-    // EXPECT_EQ(myMaze.getPath(), expectedPath);
+  // outSS << skp;
+  // assert(outSS.str() == "[level: 3] 7-->nullptr\n"
+  //                       "[level: 2] 3-->7-->nullptr\n"
+  //                       "[level: 1] 1-->3-->5-->7-->9-->20-->nullptr\n");
+
+  // skp.add(vector<int>{-20, 100});
+  // outSS.str("");
+  // outSS << skp;
+  // assert(outSS.str() ==
+  //        "[level: 3] -20-->7-->100-->nullptr\n"
+  //        "[level: 2] -20-->3-->7-->100-->nullptr\n"
+  //        "[level: 1] -20-->1-->3-->5-->7-->9-->20-->100-->nullptr\n");
+
+  // // TODO(student) check that contains searches from top level down
+  // assert(skp.contains(1) && skp.contains(7) && skp.contains(9));
+  // assert(!skp.contains(0) && !skp.contains(200));
+  // assert(skp.contains(-20) && skp.contains(100));
+
+  // SkipList skp2(3, 30);
+  // skp2.add(vector<int>{9, 1, 7, 5, 3, 20});
+  // outSS.str("");
+  // outSS << skp2;
+  // assert(outSS.str() == "[level: 3] nullptr\n"
+  //                       "[level: 2] 3-->5-->nullptr\n"
+  //                       "[level: 1] 1-->3-->5-->7-->9-->20-->nullptr\n");
+
+  // assert(skp2.contains(3) && skp2.contains(5) && skp2.contains(20));
+  // assert(!skp2.contains(-3) && !skp2.contains(4) && !skp2.contains(200));
+  // // TODO(student) check there are no memory leaks after test completed
+  // cout << "test3 done." << endl;
 }
 
