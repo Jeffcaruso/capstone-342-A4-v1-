@@ -5,7 +5,6 @@ cc_test(
   size = "small",
   srcs = glob(["Test1.cpp"]),
   copts = ["-Iexternal/gtest/include"],
-  data =["//data:maze0.txt"],
   deps = [
     "@com_google_googletest//:gtest_main",
     "//applib:APPLib"
@@ -17,7 +16,6 @@ cc_test(
   size = "small",
   srcs = glob(["Test2.cpp"]),
   copts = ["-Iexternal/gtest/include"],
-  data =["//data:maze1.txt"],
   deps = [
     "@com_google_googletest//:gtest_main",
     "//applib:APPLib"
@@ -29,7 +27,6 @@ cc_test(
   size = "small",
   srcs = glob(["Test3.cpp"]),
   copts = ["-Iexternal/gtest/include"],
-  data =["//data:maze2.txt"],
   deps = [
     "@com_google_googletest//:gtest_main",
     "//applib:APPLib"
@@ -41,7 +38,6 @@ cc_test(
   size = "small",
   srcs = glob(["Test4.cpp"]),
   copts = ["-Iexternal/gtest/include"],
-  data =["//data:maze3.txt"],
   deps = [
     "@com_google_googletest//:gtest_main",
     "//applib:APPLib"
@@ -53,7 +49,6 @@ cc_test(
   size = "small",
   srcs = glob(["Test5.cpp"]),
   copts = ["-Iexternal/gtest/include"],
-  data =["//data:badfile.txt"],
   deps = [
     "@com_google_googletest//:gtest_main",
     "//applib:APPLib"
