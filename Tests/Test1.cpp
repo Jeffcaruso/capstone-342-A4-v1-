@@ -14,7 +14,7 @@
 
 using namespace std;
 
-TEST(Test1, maze0)
+TEST(Test1, t1)
 {
 
 
