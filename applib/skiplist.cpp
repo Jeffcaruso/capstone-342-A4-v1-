@@ -16,6 +16,13 @@ bool SkipList::shouldInsertAtHigherLevel() const
 
 // you code goes here
 
+SkipList::SkipList(int levels, int probability)
+{
+	this->levels = levels;
+	this->probability = probability;
+	return;
+}
+
 SkipList::~SkipList()
 {
 	return;

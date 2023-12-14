@@ -8,7 +8,7 @@
 int main()
 {
     stringstream outSS;
-    SkipList skp;
+    SkipList skp(3,25);
     skp.add(3);
     outSS << skp;
     cout << outSS.str() << endl;
