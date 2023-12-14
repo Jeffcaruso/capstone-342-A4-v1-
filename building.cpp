@@ -1,4 +1,5 @@
-#include "applib/maze.h" 
+#include "applib/skiplist.h" 
+#include "applib/random.h"
 
 #include <iostream>
 
