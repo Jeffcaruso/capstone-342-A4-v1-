@@ -6,6 +6,7 @@
         "xutility": "cpp",
         "iosfwd": "cpp",
         "algorithm": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "sstream": "cpp"
     }
 }

@@ -11,39 +11,43 @@
 
 #include <iostream>
 #include <sstream>
+#include <vector>
 
 using namespace std;
-
 
 // removing from multi-level SkipList
 TEST(Test4, removeFromMultiLevelSkiplist)
 {
+	stringstream outSS;
+	SkipList skplst(3, 50);
+	skplst.add(vector<int>{9, 1, 7, 5, 3, 20});
+	outSS << skplst;
+	string ansStr = "[level: 3] 20-->nullptr\n"
+					"[level: 2] 3-->5-->7-->9-->20-->nullptr\n"
+					"[level: 1] 1-->3-->5-->7-->9-->20-->nullptr\n";
+	EXPECT_EQ(outSS.str(), ansStr);
 
-	// stringstream outSS;
-  // SkipList skp(3, 50);
-  // skp.add(vector<int>{9, 1, 7, 5, 3, 20});
+	SkipList skplst2(skplst);
+	ASSERT_TRUE(skplst.remove(1));
+	ASSERT_TRUE(!skplst.remove(100));
+	ASSERT_TRUE(skplst.remove(9));
 
-  // outSS << skp;
-  // assert(outSS.str() == "[level: 3] 20-->nullptr\n"
-  //                       "[level: 2] 3-->5-->7-->9-->20-->nullptr\n"
-  //                       "[level: 1] 1-->3-->5-->7-->9-->20-->nullptr\n");
-  // SkipList skp2(skp);
-  // assert(skp.remove(1));
-  // assert(!skp.remove(100));
-  // assert(skp.remove(9));
+	outSS.str("");
+	outSS << skplst;
+	ansStr = "[level: 3] 20-->nullptr\n"
+			 "[level: 2] 3-->5-->7-->20-->nullptr\n"
+			 "[level: 1] 3-->5-->7-->20-->nullptr\n";
 
-  // outSS.str("");
-  // outSS << skp;
-  // assert(outSS.str() == "[level: 3] 20-->nullptr\n"
-  //                       "[level: 2] 3-->5-->7-->20-->nullptr\n"
-  //                       "[level: 1] 3-->5-->7-->20-->nullptr\n");
+	// // skp2 should be unchanged
+	outSS.str("");
+	outSS << skplst2;
+	ansStr = "[level: 3] 20-->nullptr\n"
+			 "[level: 2] 3-->5-->7-->9-->20-->nullptr\n"
+			 "[level: 1] 1-->3-->5-->7-->9-->20-->nullptr\n";
+	EXPECT_EQ(outSS.str(), ansStr);
 
-  // // skp2 should be unchanged
-  // outSS.str("");
-  // outSS << skp2;
-  // assert(outSS.str() == "[level: 3] 20-->nullptr\n"
-  //                       "[level: 2] 3-->5-->7-->9-->20-->nullptr\n"
-  //                       "[level: 1] 1-->3-->5-->7-->9-->20-->nullptr\n");
-  // // TODO(student) check there are no memory leaks after test completed
-  // cout << "test4 done." << endl;
+	// // TODO(student) check there are no memory leaks after test completed
+	// cout << "test4 done." << endl;
+	//memory leaks are covered by valgrind within gTest. 
+	// So if you have mem leaks, GitHub will be informed, the test will fail.
 }
