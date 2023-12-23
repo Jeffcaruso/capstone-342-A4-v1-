@@ -48,7 +48,7 @@ TEST(Test3, multiLevelSkiplist)
 	ansStr = "[level: 3] nullptr\n"
 	         "[level: 2] 3-->5-->nullptr\n"
 	         "[level: 1] 1-->3-->5-->7-->9-->20-->nullptr\n";
-	EXPECT_EQ(outSS.str(), ansStr)
+	EXPECT_EQ(outSS.str(), ansStr);
 
 	EXPECT_TRUE(skplst2.contains(3) && skplst2.contains(5) && skplst2.contains(20));
 	EXPECT_TRUE(!skplst2.contains(-3) && !skplst2.contains(4) && !skplst2.contains(200));

@@ -43,8 +43,8 @@ TEST(Test1, testingOutAddContains)
 	ansStr = "[level: 1] 1-->3-->5-->7-->9-->nullptr\n";
 	EXPECT_EQ(outSS.str(), ansStr);
 
-	EXPECT_TRUE(skplst.contains(1) && skp.contains(7) && skp.contains(9));
-	EXPECT_TRUE(!skplst.contains(0) && !skp.contains(20));
+	EXPECT_TRUE(skplst.contains(1) && skplst.contains(7) && skplst.contains(9));
+	EXPECT_TRUE(!skplst.contains(0) && !skplst.contains(20));
 
 
 	// // TODO(student) check there are no memory leaks after test completed*

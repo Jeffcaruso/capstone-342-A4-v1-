@@ -23,6 +23,11 @@ SkipList::SkipList(int levels, int probability)
 	return;
 }
 
+SkipList::SkipList(const SkipList &other)
+{
+	return nullptr;
+}
+
 SkipList::~SkipList()
 {
 	return;

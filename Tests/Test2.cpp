@@ -32,7 +32,7 @@ TEST(Test2, copyConstructorTesting)
 	string ansStr = "[level: 1] 1-->5-->7-->9-->nullptr\n";
 	EXPECT_EQ(outSS.str(), ansStr);
 
-	SkipList *skplst2 = new SkipList(*skp1);
+	SkipList *skplst2 = new SkipList(*Skplst1);
 	delete Skplst1;
 	outSS.str("");
 	outSS << *skplst2;
