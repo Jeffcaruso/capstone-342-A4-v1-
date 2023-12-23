@@ -25,7 +25,9 @@ SkipList::SkipList(int levels, int probability)
 
 SkipList::SkipList(const SkipList &other)
 {
-	return nullptr;
+	//do Copy Constructor actions here...
+
+	//your code here...
 }
 
 SkipList::~SkipList()
