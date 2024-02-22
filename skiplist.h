@@ -22,6 +22,7 @@
 #define SKIPLIST_H
 
 #include <iostream>
+#include <unordered_set>
 #include <vector>
 
 using namespace std;
@@ -47,6 +48,9 @@ private:
   // data contained in the object
   int val;
 
+  // shows whether the SNode is a "null pointer" or not
+  bool isNullPtr = false;
+
   // link to Next SNode at each level
   vector<SNode *> next;
 };
@@ -66,6 +70,9 @@ private:
 
   // special head SNode that is always present
   SNode *head;
+
+  // set of nodes to be deleted
+  unordered_set<SNode *> deleteSNodes;
 
   // return true p% of time,
   // for p = 50, each node has a 50% chance of being at higher level
