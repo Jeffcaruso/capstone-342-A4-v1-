@@ -40,9 +40,6 @@ TEST(Test2, copyConstructorTesting)
 	EXPECT_EQ(outSS.str(), ansStr);
 	delete skplst2;
 
-	// // TODO(student) check there are no memory leaks after test completed
-	// cout << "test2 done." << endl;
-
 	//memory leaks are covered by valgrind within gTest. 
 	// So if you have mem leaks, GitHub will be informed, the test will fail.
 }

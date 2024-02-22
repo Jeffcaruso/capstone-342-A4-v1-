@@ -46,8 +46,6 @@ TEST(Test4, removeFromMultiLevelSkiplist)
 			 "[level: 1] 1-->3-->5-->7-->9-->20-->nullptr\n";
 	EXPECT_EQ(outSS.str(), ansStr);
 
-	// // TODO(student) check there are no memory leaks after test completed
-	// cout << "test4 done." << endl;
 	//memory leaks are covered by valgrind within gTest. 
 	// So if you have mem leaks, GitHub will be informed, the test will fail.
 }

@@ -53,8 +53,6 @@ TEST(Test3, multiLevelSkiplist)
 	EXPECT_TRUE(skplst2.contains(3) && skplst2.contains(5) && skplst2.contains(20));
 	EXPECT_TRUE(!skplst2.contains(-3) && !skplst2.contains(4) && !skplst2.contains(200));
 
-	// // TODO(student) check there are no memory leaks after test completed
-	// cout << "test3 done." << endl;
 	//memory leaks are covered by valgrind within gTest. 
 	// So if you have mem leaks, GitHub will be informed, the test will fail.
 }

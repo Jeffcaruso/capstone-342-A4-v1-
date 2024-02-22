@@ -46,11 +46,7 @@ TEST(Test1, testingOutAddContains)
 	EXPECT_TRUE(skplst.contains(1) && skplst.contains(7) && skplst.contains(9));
 	EXPECT_TRUE(!skplst.contains(0) && !skplst.contains(20));
 
-
-	// // TODO(student) check there are no memory leaks after test completed*
-	// cout << "test1 done." << endl;
 	//memory leaks are covered by valgrind within gTest. 
 	// So if you have mem leaks, GitHub will be informed, the test will fail.
-
 
 }
