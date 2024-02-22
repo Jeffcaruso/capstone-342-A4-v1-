@@ -9,18 +9,14 @@
 #include "skiplist.h"
 #include "random.h"
 
-//using namespace std;
+using namespace std;
 
-namespace {
-    TEST(Test0, TrivialTest)
-    {
-        //Make LargeNum class ln
-        //test the build
-        SkipList skplst();
+TEST(Test0, TrivialTest)
+{
+    // Make LargeNum class ln
+    // test the build
+    SkipList skplst();
 
-        //always true
-        EXPECT_EQ(0, 0);
-    }
-
-} // namespace
-
+    // always true
+    EXPECT_EQ(0, 0);
+}

@@ -6,8 +6,8 @@
 //==========================================================n==================
 
 #include <gtest/gtest.h>
-#include "applib/skiplist.h"
-#include "applib/random.h"
+#include "skiplist.h"
+#include "random.h"
 
 #include <iostream>
 #include <sstream>
@@ -48,5 +48,4 @@ TEST(Test1, testingOutAddContains)
 
 	//memory leaks are covered by valgrind within gTest. 
 	// So if you have mem leaks, GitHub will be informed, the test will fail.
-
 }

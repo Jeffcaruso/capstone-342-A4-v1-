@@ -6,8 +6,8 @@
 //============================================================================
 
 #include <gtest/gtest.h>
-#include "applib/skiplist.h"
-#include "applib/random.h"
+#include "skiplist.h"
+#include "random.h"
 
 #include <iostream>
 #include <sstream>
