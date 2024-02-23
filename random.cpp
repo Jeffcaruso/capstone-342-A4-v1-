@@ -8,6 +8,16 @@ int Random::random() {
   return NUMS[counter++];
 }
 
+void Random::setSeed(int indexToSet)
+{
+  counter = indexToSet;
+}
+
+int Random::getSeed()
+{
+  return counter;
+}
+
 int Random::counter = 0;
 
 const vector<int> Random::NUMS = {

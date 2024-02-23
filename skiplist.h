@@ -38,11 +38,8 @@ class SNode {
   friend ostream &operator<<(ostream &out, const SkipList &skip);
 
 private:
-  // default no-argument constructor
-  explicit SNode() : val(0) {}
-
-  // parameterized constructor for value
-  explicit SNode(int value) : val(value) {}
+  // constructor
+  explicit SNode(int val = 0);
 
   // copy constructor
   SNode(const SNode &other);
@@ -56,7 +53,7 @@ private:
 
 class SkipList {
 
-  // displays SkipList with level
+  // display with level
   friend ostream &operator<<(ostream &out, const SkipList &skip);
 
 private:
@@ -94,10 +91,10 @@ public:
   // Add to list, assume no duplicates
   void add(const vector<int> &values);
 
-  // returns true if successfully removed
+  // return true if successfully removed
   bool remove(int val);
 
-  // returns true if found in SkipList
+  // return true if found in SkipList
   bool contains(int val) const;
 };
 
