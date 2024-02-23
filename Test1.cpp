@@ -18,6 +18,9 @@ using namespace std;
 // testing basic operations: operator<<, add, contains
 TEST(Test1, testingOutAddContains)
 {
+	Random r;
+	r.setSeed(0);
+
 	stringstream outSS;
 	SkipList skplst;
 	skplst.add(3);
@@ -45,6 +48,8 @@ TEST(Test1, testingOutAddContains)
 
 	EXPECT_TRUE(skplst.contains(1) && skplst.contains(7) && skplst.contains(9));
 	EXPECT_TRUE(!skplst.contains(0) && !skplst.contains(20));
+
+	cout << "Seed is now: " << r.getSeed() << endl;
 
 	//memory leaks are covered by valgrind within gTest. 
 	// So if you have mem leaks, GitHub will be informed, the test will fail.

@@ -16,6 +16,10 @@ private:
 public:
   // return a pseudorandom number
   static int random();
+
+  static void setSeed(int indexToSet);
+
+  static int getSeed();
 };
 
 #endif

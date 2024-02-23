@@ -23,6 +23,10 @@ using namespace std;
 // testing the copy constructor for the SkipList
 TEST(Test2, copyConstructorTesting)
 {
+	Random r;
+	r.setSeed(0);
+
+
 	stringstream outSS;
 	SkipList *Skplst1 = new SkipList;
 	Skplst1->add(vector<int>{9, 1, 7, 5});
@@ -39,6 +43,8 @@ TEST(Test2, copyConstructorTesting)
 	ansStr = "[level: 1] 1-->5-->7-->9-->nullptr\n";
 	EXPECT_EQ(outSS.str(), ansStr);
 	delete skplst2;
+
+	cout << "Seed is now: " << r.getSeed() << endl;
 
 	//memory leaks are covered by valgrind within gTest. 
 	// So if you have mem leaks, GitHub will be informed, the test will fail.

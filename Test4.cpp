@@ -18,6 +18,10 @@ using namespace std;
 // removing from multi-level SkipList
 TEST(Test4, removeFromMultiLevelSkiplist)
 {
+	Random r;
+	r.setSeed(20);
+
+
 	stringstream outSS;
 	SkipList skplst(3, 50);
 	skplst.add(vector<int>{9, 1, 7, 5, 3, 20});
@@ -46,6 +50,8 @@ TEST(Test4, removeFromMultiLevelSkiplist)
 			 "[level: 1] 1-->3-->5-->7-->9-->20-->nullptr\n";
 	EXPECT_EQ(outSS.str(), ansStr);
 
+
+	cout << "Seed is now: " << r.getSeed() << endl;
 	//memory leaks are covered by valgrind within gTest. 
 	// So if you have mem leaks, GitHub will be informed, the test will fail.
 }
