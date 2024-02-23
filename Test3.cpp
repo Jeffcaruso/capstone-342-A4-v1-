@@ -58,7 +58,7 @@ TEST(Test3, multiLevelSkiplist)
 	EXPECT_TRUE(!skplst2.contains(-3) && !skplst2.contains(4) && !skplst2.contains(200));
 
 
-	cout << "Seed is: " << r.getSeed() << endl;
+	cout << "Seed is now: " << r.getSeed() << endl;
 	//memory leaks are covered by valgrind within gTest. 
 	// So if you have mem leaks, GitHub will be informed, the test will fail.
 }

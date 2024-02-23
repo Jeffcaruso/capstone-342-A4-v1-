@@ -44,7 +44,7 @@ TEST(Test2, copyConstructorTesting)
 	EXPECT_EQ(outSS.str(), ansStr);
 	delete skplst2;
 
-	cout << "Seed is: " << r.getSeed() << endl;
+	cout << "Seed is now: " << r.getSeed() << endl;
 
 	//memory leaks are covered by valgrind within gTest. 
 	// So if you have mem leaks, GitHub will be informed, the test will fail.

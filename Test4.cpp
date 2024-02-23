@@ -51,7 +51,7 @@ TEST(Test4, removeFromMultiLevelSkiplist)
 	EXPECT_EQ(outSS.str(), ansStr);
 
 
-	cout << "Seed is: " << r.getSeed() << endl;
+	cout << "Seed is now: " << r.getSeed() << endl;
 	//memory leaks are covered by valgrind within gTest. 
 	// So if you have mem leaks, GitHub will be informed, the test will fail.
 }

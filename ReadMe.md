@@ -8,5 +8,3 @@
 
 ## reference:
  - https://github.com/pisan342/ass4-skiplist-starter
-
-
